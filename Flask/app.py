@@ -82,15 +82,25 @@ def home():
         user_text = request.form["email_text"]
 
         # Predict
-        pred = predict_raw([user_text])[0]
+        #pred = predict_raw([user_text])[0]
         proba = predict_proba_raw([user_text])[0]
 
-        if pred == 1:
-            prediction = "Phishing"
-            confidence = round(proba[1] * 100, 2)
-        else:
-            prediction = "Legitimate"
-            confidence = round(proba[0] * 100, 2)
+        threshold = 0.3
+        
+    if proba[1] >= threshold:
+        prediction = "Phishing"
+        confidence = round(proba[1] * 100, 2)
+    else:
+        prediction = "Legitimate"
+        confidence = round(proba[0] * 100, 2)
+
+
+        #if pred == 1:
+            #prediction = "Phishing"
+            #confidence = round(proba[1] * 100, 2)
+        #else:
+            #prediction = "Legitimate"
+            #confidence = round(proba[0] * 100, 2)
 
         # Generate LIME explanation
         exp = explainer.explain_instance(
