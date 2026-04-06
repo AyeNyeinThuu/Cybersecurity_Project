@@ -1,0 +1,24 @@
+# datasets
+*.csv
+
+# ignore all models by default
+*.pkl
+
+# but keep the final Flask model
+!Flask/TF_IDF_Model.pkl
+
+# notebooks
+#*.ipynb
+
+# outputs
+lime_explanation.html
+lime_raw_email.html
+output.csv
+
+# python cache
+__pycache__/
+*.pyc
+
+# environments
+venv/
+cybersec_1/

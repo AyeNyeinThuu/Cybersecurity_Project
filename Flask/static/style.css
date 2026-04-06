@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #222;
+}
+
+form {
+    margin-bottom: 25px;
+}
+
+textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 10px;
+    background: #eef6ff;
+    border-left: 5px solid #0077cc;
+}
+
+.lime-box {
+    margin-top: 30px;
+}
+
+.lime-wrapper {
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: auto;
+    background: #fff;
+    padding: 10px;
+}
