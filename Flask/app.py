@@ -30,10 +30,18 @@
 
 
 from flask import Flask, render_template, request
+import os
 import pickle
 import string
+import nltk
 from nltk.corpus import stopwords
 from lime.lime_text import LimeTextExplainer
+
+# Ensure required NLTK resources exist on Render
+try:
+    nltk.data.find("corpora/stopwords")
+except LookupError:
+    nltk.download("stopwords")
 
 app = Flask(__name__)
 
